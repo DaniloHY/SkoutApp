@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="#009688">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -29,7 +30,7 @@
             android:layout_marginTop="50dp"
             android:background="@drawable/borda"
             android:drawableEnd="@drawable/ic_baseline_email"
-            android:hint="Insira o usuário"
+            android:hint="Insira o seu usuário"
             android:inputType="textPersonName"
             android:maxLength="100"
             android:padding="20dp" />
@@ -41,8 +42,8 @@
             android:layout_marginTop="15dp"
             android:background="@drawable/borda"
             android:drawableEnd="@drawable/ic_baseline_lock"
-            android:hint="Insira o usuário"
-            android:inputType="textPersonName"
+            android:hint="Insira a sua senha"
+            android:inputType="textPassword"
             android:maxLength="100"
             android:padding="20dp" />
 
@@ -58,8 +59,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="5dp"
+                android:background="@drawable/borda"
                 android:layout_weight="1"
-                android:text="Entrar" />
+                android:text="Entrar"
+                />
 
             <Button
                 android:id="@+id/btnSair"
@@ -67,8 +70,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="15dp"
+                android:background="@drawable/borda"
                 android:layout_weight="1"
                 android:text="Sair" />
+
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
