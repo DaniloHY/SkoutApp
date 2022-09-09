@@ -31,7 +31,7 @@
             android:background="@drawable/borda"
             android:drawableEnd="@drawable/ic_baseline_email"
             android:hint="Insira o seu e-mail"
-            android:inputType="textPersonName"
+            android:inputType="textEmailAddress"
             android:maxLength="100"
             android:padding="20dp" />
 

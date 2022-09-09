@@ -2,10 +2,12 @@ package br.com.etecia.skoutapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -24,10 +26,41 @@ public class MainActivity extends AppCompatActivity {
         btnEntrar = findViewById(R.id.btnEntrar);
         btnSair = findViewById(R.id.btnSair);
 
-
+        //craindo a ação de botão sair
         btnSair.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                finish();
+            }
+        });
+
+        btnEntrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                //Criando as variáveis
+                String usuario, senha;
+
+                //Atribuindo valores as variáveis
+                usuario = edtUsuario.getText().toString();
+                senha = edtSenha.getText().toString();
+
+                //Validando o usuário e senha
+                if (usuario.equals("etecia") && senha.equals("etecia")) {
+                    //Abrirmos a janela MenuPrincipal
+                    startActivity(new Intent(getApplicationContext(),
+                            MenuPrincipalActivity.class));
+                    finish();
+
+                } else {
+                    Toast.makeText(getApplicationContext(),
+                            "Usuário ou senha inválidos!!!",
+                            Toast.LENGTH_SHORT).show();
+                    edtUsuario.setText("");
+                    edtSenha.setText("");
+                    edtUsuario.requestFocus();
+                }
+
 
             }
         });
